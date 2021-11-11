@@ -2,6 +2,8 @@ import axios from "axios";
 import { useRef } from "react";
 import "./register.css";
 import { useHistory } from "react-router";
+import backgroundImg from "../login/login-back.jpg";
+
 
 export default function Register() {
   const username = useRef();
@@ -30,16 +32,16 @@ export default function Register() {
   };
 
   return (
-    <div className="login">
+    <div className="login" style={{ backgroundImage: `url(${backgroundImg})`}}>
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Codination</h3>
+          <h3 className="loginLogo">Codination {"</>"}</h3>
           <span className="loginDesc">
           Connect with coders around the world and find guidance at your finger-tips.
           </span>
         </div>
         <div className="loginRight">
-          <form className="loginBox" onSubmit={handleClick}>
+          <form className="loginBox" onSubmit={handleClick} style={{ backgroundColor: 'rgb(71,71,71)'}}>
             <input
               placeholder="Username"
               required

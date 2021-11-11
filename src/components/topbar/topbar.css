@@ -96,6 +96,21 @@
   cursor: pointer;
 }
 
+.profiletext {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightProfile {  
+  margin-right: 50px;
+}
+
 @media screen and (max-width: 768px)  {
   .topbarLink{
     display: none;

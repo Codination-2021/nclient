@@ -11,6 +11,10 @@ import {
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import Messenger from "./pages/messenger/Messenger";
+import Landing from "./components/landingPage/Landing";
+import Services from "./components/landingPage/Services";
+import About from "./components/landingPage/About";
+import Contact from "./components/landingPage/Contact";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -18,7 +22,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          {user ? <Home /> : <Register />}
+          {user ? <Home /> : <Landing />}
         </Route>
         {/* <Route path="/login"> <Login /></Route> */}
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
@@ -31,6 +35,11 @@ function App() {
         <Route path="/profile/:username">
           <Profile />
         </Route>
+       {/* <Route exact path="/" component={Home} /> */}
+			<Route exact path="/services" component={Services} />
+			<Route exact path="/about" component={About} />
+			<Route exact path="/contact" component={Contact} />
+			{/* <Redirect to="/" /> */}
       </Switch>
     </Router>
   );

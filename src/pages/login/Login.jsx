@@ -1,9 +1,10 @@
 import { useContext, useRef } from "react";
-import "./login.css";
+import "../login/userlogin.css";
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
 import { CircularProgress } from "@material-ui/core";
 import { useHistory } from "react-router";
+import backgroundImg from "../login/login-back.jpg";
 
 export default function Login() {
   const email = useRef();
@@ -20,16 +21,16 @@ export default function Login() {
   };
 
   return (
-    <div className="login">
+    <div className="login" style={{ backgroundImage: `url(${backgroundImg})`}}>
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Codination</h3>
-          <span className="loginDesc">
+          <h3 className="loginLogo">Codination {"</>"}</h3>
+          <span className="loginDesc" style={{ color: 'rgb(252, 81, 69)'}}>
             Connect with coders around the world and find guidance at your finger-tips.
           </span>
         </div>
         <div className="loginRight">
-          <form className="loginBox" onSubmit={handleClick}>
+          <form className="loginBox" onSubmit={handleClick} style={{ backgroundColor: 'rgb(71,71,71)'}}>
             <input
               placeholder="Email"
               type="email"

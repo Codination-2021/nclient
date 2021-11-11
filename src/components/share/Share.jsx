@@ -53,7 +53,7 @@ export default function Share() {
             alt=""
           />
           <input
-            placeholder={"What's in your mind " + user.username + "?"}
+            placeholder={"What are your thoughts on programming " + user.username + "?"}
             className="shareInput"
             ref={desc}
           />
@@ -69,7 +69,7 @@ export default function Share() {
           <div className="shareOptions">
             <label htmlFor="file" className="shareOption">
               <PermMedia htmlColor="tomato" className="shareIcon" />
-              <span className="shareOptionText">Photo or Video</span>
+              <span className="shareOptionText">Upload a Photo</span>
               <input
                 style={{ display: "none" }}
                 type="file"
@@ -78,7 +78,7 @@ export default function Share() {
                 onChange={(e) => setFile(e.target.files[0])}
               />
             </label>
-            <div className="shareOption">
+            {/* <div className="shareOption">
               <Label htmlColor="blue" className="shareIcon" />
               <span className="shareOptionText">Tag</span>
             </div>
@@ -89,7 +89,7 @@ export default function Share() {
             <div className="shareOption">
               <EmojiEmotions htmlColor="goldenrod" className="shareIcon" />
               <span className="shareOptionText">Feelings</span>
-            </div>
+            </div> */}
           </div>
           <button className="shareButton" type="submit">
             Share
