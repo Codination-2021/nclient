@@ -20,7 +20,7 @@ export default function Topbar() {
         <div className="searchbar">
           <Search className="searchIcon" />
           <input
-            placeholder="Search for friend, post or video"
+            placeholder="Search for blogs, groups or coders"
             className="searchInput"
           />
         </div>
@@ -28,22 +28,23 @@ export default function Topbar() {
       <div className="topbarRight">
         <div className="topbarLinks">
           <span className="topbarLink" onClick={() => history.push("/")}>Homepage</span>
-          <span className="topbarLink">Timeline</span>
+          {/* <span className="topbarLink">Timeline</span> */}
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
             <Person />
-            <span className="topbarIconBadge">1</span>
+            {/* <span className="topbarIconBadge">1</span> */}
           </div>
-          <div className="topbarIconItem">
+          <div className="topbarIconItem" onClick={() => window.location= "https://namastechat.herokuapp.com/chat"}>
             <Chat />
-            <span className="topbarIconBadge">2</span>
+            {/* <span className="topbarIconBadge">2</span> */}
           </div>
           <div className="topbarIconItem">
             <Notifications />
-            <span className="topbarIconBadge">1</span>
+            {/* <span className="topbarIconBadge">1</span> */}
           </div>
         </div>
+        <div className="rightProfile">
         <Link to={`/profile/${user.username}`}>
           <img
             src={
@@ -54,8 +55,9 @@ export default function Topbar() {
             alt=""
             className="topbarImg"
           />
-          Profile
+          <span className="profiletext">My Profile</span>
         </Link>
+        </div>
       </div>
     </div>
   );

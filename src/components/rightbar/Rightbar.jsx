@@ -49,12 +49,15 @@ export default function Rightbar({ user }) {
     return (
       <>
         <div className="birthdayContainer">
-          <img className="birthdayImg" src="assets/gift.png" alt="" />
+          <img className="birthdayImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXvq4GJ_CWQERUqXt5LE585X6aD2uosvccFg&usqp=CAU" alt="" />
           <span className="birthdayText">
-            <b>Pola Foster</b> and <b>3 other friends</b> have a birhday today.
+            <b>Deep Shah</b> and <b>3 other friends</b> have created a post today.
           </span>
         </div>
-        <img className="rightbarAd" src="assets/ad.png" alt="" />
+        <img className="rightbarAd" src="https://www.surrey.ac.uk/sites/default/files/styles/640x360_16_9/public/2020-05/cyber-security-finger-internet-media.jpg?itok=9UKrLgaX" alt="" />
+        <img className="rightbarAd" src="https://www.directadmissiononline.com/wp-content/uploads/2018/09/computer-science-header.jpg" alt="" />
+        <img className="rightbarAd" src="https://www.eschoolnews.com/files/2016/12/computer-science-education.jpg" alt="" />
+        
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
           {Users.map((u) => (
