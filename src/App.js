@@ -15,6 +15,7 @@ import Landing from "./components/landingPage/Landing";
 import Services from "./components/landingPage/Services";
 import About from "./components/landingPage/About";
 import Contact from "./components/landingPage/Contact";
+import Dummy from "./components/dummy";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -39,6 +40,7 @@ function App() {
 			<Route exact path="/services" component={Services} />
 			<Route exact path="/about" component={About} />
 			<Route exact path="/contact" component={Contact} />
+      <Route exact path="/dummy" component={Dummy} />
 			{/* <Redirect to="/" /> */}
       </Switch>
     </Router>
