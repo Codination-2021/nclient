@@ -23,7 +23,9 @@ export default function Register() {
         password: password.current.value,
       };
       try {
-        await axios.post("/auth/register", user);
+        await axios.post("http://localhost:8800/api/auth/register", user).then((res)=>{
+          console.log(res);
+        });
         history.push("/login");
       } catch (err) {
         console.log(err);
@@ -41,7 +43,7 @@ export default function Register() {
           </span>
         </div>
         <div className="loginRight">
-          <form className="loginBox" onSubmit={handleClick} style={{ backgroundColor: 'rgb(71,71,71)'}}>
+          <form className="loginBox" style={{ backgroundColor: 'rgb(71,71,71)'}}>
             <input
               placeholder="Username"
               required
@@ -70,7 +72,7 @@ export default function Register() {
               className="loginInput"
               type="password"
             />
-            <button className="loginButton" type="submit">
+            <button className="loginButton" onClick={handleClick}>
               Sign Up
             </button>
             <button className="loginRegisterButton" onClick={ () => history.push("/login")}>Log into Account</button>
