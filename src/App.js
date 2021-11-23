@@ -17,9 +17,11 @@ import About from "./components/landingPage/About";
 import Contact from "./components/landingPage/Contact";
 import Dummy from "./components/dummy";
 import ChatSystem from "./components/ChatSystem/ChatSystem";
+import ChatButton from "./components/ChatSystem/ChatButton";
 
 function App() {
   const { user } = useContext(AuthContext);
+  // console.log(user)
   return (
     <Router>
       <Switch>
@@ -43,6 +45,7 @@ function App() {
 			<Route exact path="/contact" component={Contact} />
       <Route exact path="/dummy" component={Dummy} />
 			<Route exact path="/TestChat" component={ChatSystem}/>
+      <Route exact path="/TestButton" component={ChatButton}/>
       </Switch>
     </Router>
   );

@@ -7,7 +7,23 @@
     display: flex;
     flex-flow: column;
     width: 500px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
     overflow: hidden;
+  }
+
+  .chatbutton {
+    position: fixed;
+    right: 550px;
+    bottom: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .chatimage {
+    align-items: center;
   }
   
   .header {
