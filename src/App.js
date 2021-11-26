@@ -21,7 +21,7 @@ import ChatButton from "./components/ChatSystem/ChatButton";
 
 function App() {
   const { user } = useContext(AuthContext);
-  // console.log(user)
+   console.log(user)
   return (
     <Router>
       <Switch>

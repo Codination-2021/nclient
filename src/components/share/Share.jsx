@@ -15,7 +15,7 @@ export default function Share() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const desc = useRef();
   const [file, setFile] = useState(null);
-
+  console.log("Inside Share",user)
   const submitHandler = async (e) => {
     e.preventDefault();
     const newPost = {
